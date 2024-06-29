@@ -11,11 +11,8 @@ function App() {
       <div className="bg-bgColor">
         <Routes>
           <Route path="/" element={<IntroPage />} />
-        </Routes>
-        <Routes>
+          <Route path="/home-page" element={<HomePage />} />
           <Route path="/login" element={<LoginPage />} />
-        </Routes>
-        <Routes>
           <Route path="/register" element={<RegisterPage />} />
         </Routes>
       </div>
