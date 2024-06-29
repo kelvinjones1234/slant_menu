@@ -7,15 +7,18 @@ import RegisterPage from "./pages/RegisterPage";
 
 function App() {
   return (
-    <BrowserRouter basename="/">
-      {/* <div className="bg-bgColor"> */}
+    <BrowserRouter>
+      <div className="bg-bgColor">
         <Routes>
           <Route path="/" element={<IntroPage />} />
-          <Route path="/home-page" element={<HomePage />} />
+        </Routes>
+        <Routes>
           <Route path="/login" element={<LoginPage />} />
+        </Routes>
+        <Routes>
           <Route path="/register" element={<RegisterPage />} />
         </Routes>
-      {/* </div> */}
+      </div>
     </BrowserRouter>
   );
 }
