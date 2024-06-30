@@ -4,24 +4,18 @@ import IntroPage from "./pages/IntroPage";
 import HomePage from "./pages/HomePage";
 import LoginPage from "./pages/LoginPage";
 import RegisterPage from "./pages/RegisterPage";
+import QrScanner from "./pages/QrScanner";
 
 function App() {
   return (
     <BrowserRouter>
-      <div className="bg-bgColor">
-        <Routes>
-          <Route path="/" element={<IntroPage />} />
-        </Routes>
-        <Routes>
-          <Route path="/login" element={<LoginPage />} />
-        </Routes>
-        <Routes>
-          <Route path="/register" element={<RegisterPage />} />
-        </Routes>
-        <Routes>
-          <Route path="/home-page" element={<HomePage />} />
-        </Routes>
-      </div>
+      <Routes>
+        <Route path="/" element={<IntroPage />} />
+        <Route path="/home-page" element={<HomePage />} />
+        <Route path="/login" element={<LoginPage />} />
+        <Route path="/register" element={<RegisterPage />} />
+        <Route path="/qrscanner" element={<QrScanner />} />
+      </Routes>
     </BrowserRouter>
   );
 }

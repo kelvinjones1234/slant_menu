@@ -1,47 +1,62 @@
 import React from "react";
 import ButtonOne from "../components/ButtonOne";
+import { Link } from "react-router-dom";
 
 const RegisterPage = () => {
   return (
-    <div className="bg-white h-screen w-full mt-[55px] w-[330px] mx-auto">
-      <h1 className="font-[500] text-[23px]">Create Account</h1>
-      <p className="text-[14px] font-[400] opacity-70 mt-2">
-        Enter your name and password
-      </p>
-      <form action="">
-        <div className="relative mt-[2.2rem]">
-          <input
-            type="text"
-            className="border-primary outline-0 border-b-[1px] w-[328px]"
-          />
-          <span className="absolute left-0 opacity-70">Full Name</span>
-        </div>
-        <div className="relative mt-[2.2rem]">
-          <input
-            type="text"
-            className="border-primary outline-0 border-b-[1px] w-[328px]"
-          />
-          <span className="absolute left-0 opacity-70">Phone Number</span>
-        </div>
-        <div className="relative mt-[2.2rem]">
-          <input
-            type="password"
-            className="border-primary outline-0 border-b-[1px] w-[328px]"
-          />
-          <span className="absolute left-0 opacity-70">Password</span>
-        </div>
-        <div className="flex gap-4 items-start w-[328px] text-[14px]">
-          <input type="checkbox" className="mt-1" />
-          <p>
-            I have read and agreed to Qataloog’s{" "}
-            <span className="text-primary">Terms & Condition</span>
-          </p>
-        </div>
-        <ButtonOne />
-        <p className="text-center text-primarys">
-          Already have an account? Log in
+    <div className="bg-white flex justify-center h-screen max-w-[550px] mx-auto">
+      <div className="mt-[9vh] w-[90vw]">
+        <h1 className="font-[500] text-[23px]">Create Account</h1>
+        <p className="text-[14px] font-[400] opacity-70">
+          Enter your name and password
         </p>
-      </form>
+        <form action="">
+          <div className="relative my-[8vh] border-b-[1px] border-primary">
+            <input
+              type="password"
+              className="text-[15px] font-[500] outline-none form__input"
+              required="required"
+            />
+            <span className="absolute left-0 opacity-50 pointer-events-none transition-transform duration-500">
+              Full Name
+            </span>
+          </div>
+          <div className="relative my-[8vh] border-b-[1px] border-primary">
+            <input
+              type="password"
+              className="text-[15px] font-[500] outline-none max-w-[550px] form__input"
+              required="required"
+            />
+            <span className="absolute left-0 opacity-50 pointer-events-none transition-transform duration-500">
+              Phone Number
+            </span>
+          </div>
+          <div className="relative my-[8vh] border-b-[1px] border-primary">
+            <input
+              type="password"
+              className="text-[15px] font-[500] outline-none max-w-[550px] form__input"
+              required="required"
+            />
+            <span className="absolute left-0 opacity-50 pointer-events-none transition-transform duration-500">
+              Password
+            </span>
+          </div>
+          <div className="flex gap-4 mt-[2.5vh] mb-[5vh] items-start max-w-[550px] text-[14px]">
+            <input type="checkbox" className="custom-checkbox mt-1" />
+            <p className="">
+              I have read and agreed to Slant Menu
+              <span className="text-primary"> Terms & Condition</span>
+            </p>
+          </div>
+          <ButtonOne label="Sign Up" />
+          <p className="text-center text-primarys mt-[2.5vh]">
+            Already have an account?{" "}
+            <Link to={"/login"}>
+              <span className="text-primary">Log in</span>
+            </Link>
+          </p>
+        </form>
+      </div>
     </div>
   );
 };
